@@ -1,0 +1,35 @@
+---
+layout: projects
+title: Apps
+pageCustomId: apps
+---
+
+<div class="row">
+  <div class="col-lg-6 offset-lg-3">
+      <div class="nk-breadcrumbs text-center">
+          <ul>
+              <li><a href="{{site.url}}">Home</a></li>
+              <li><span>Apps</span></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="nk-gap-2"></div>
+
+  <div class="row">
+    {% for page in site.apps %}
+      <div class="col-lg-12 nk-image-box-3">
+        <div class="nk-image-box-4">
+            <a href="{{ page.url }}" class="nk-image-box-link"></a>
+            <img src="{{ page.img | prepend: site.url }}" />
+            <div class="nk-image-box-overlay nk-image-box-center">
+                <div>
+                    <h3 class="nk-image-box-title h4 mb-20">{{ page.title }}</h3>
+                    <div class="nk-btn">Go to Project</div>
+                </div>
+            </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>

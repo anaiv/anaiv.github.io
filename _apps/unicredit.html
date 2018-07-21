@@ -1,0 +1,17 @@
+---
+title: Unicredit
+date: 2018-07-01
+img: "/assets/projects/apps/01.jpg"
+---
+
+      <div class="row">
+        {% for image in site.static_files %}
+          {% if image.path contains 'projects/apps' %}
+              <div class="col-lg-6 offset-lg-3 mb-3-rem nk-image-box-1">
+                <div class="nk-image-box-4">
+                    <img src="{{ image.path | prepend: site.url }}" alt="image" />
+                </div>
+              </div>
+          {% endif %}
+        {% endfor %}
+      </div>

@@ -1,0 +1,81 @@
+# SEO settings
+title             : "Anahid Aivazian"
+description       : "Sesigner, illustrator, and noodles enthusiast living in downtown Bucharest."
+url               : "https://anaiv.github.io"
+baseurl           : "" # apply repo name if use it under gh-pages branch
+repo              : https://github.com/anaiv/anaiv.github.io/
+comments          : false
+
+_ga : "UA-120149424-1"
+
+author: "Anahid Aivazian"
+
+# Build settings
+permalink     : /:year/:month/:title
+markdown    : kramdown
+highlighter : rouge
+
+source: ./
+destination: ./_site
+
+# Social
+github_username   : "anaiv"
+twitter_card      : "summary_large_image"
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+
+categories: ["logos", "apps", "print", "webdesign", "ad-banners"]
+
+apps_img_folder: "assets/projects/apps/"
+
+collections:
+  logo:
+    output: true
+    permalink: /logo/:name
+  apps:
+    output: true
+    permalink: /apps/:name
+  print:
+    output: true
+    permalink: /print/:name
+  webdesign:
+    output: true
+    permalink: /webdesign/:name
+  banners:
+    output: true
+    permalink: /banners/:name
+  photo:
+    output: true
+    permalink: /photo/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "logo"
+    values:
+      layout: logo
+  - scope:
+      path: ""
+      type: "apps"
+    values:
+      layout: apps
+  - scope:
+      path: ""
+      type: "print"
+    values:
+      layout: print
+  - scope:
+      path: ""
+      type: "webdesign"
+    values:
+      layout: webdesign
+  - scope:
+      path: ""
+      type: "banners"
+    values:
+      layout: banners
+  - scope:
+      path: ""
+      type: "photo"
+    values:
+      layout: photo
