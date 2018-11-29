@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,41 +10,207 @@
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:400,500,700,900|PT+Serif:400,700" rel="stylesheet">
 
   <style>
-    *{box-sizing: border-box;}
-    html{font-family: 'PT Serif', serif;font-size: 1.3rem;color:black}
-    body.nightmode{color:silver;background:black;}
-    .toggle,.print{display:block;cursor:pointer;position:fixed;right:0;top:5rem;width:3rem;height:3rem;line-height:3rem;}
-    .print{top:10rem;text-align:center;}
-    .toggle:before{display:block; text-align: center;content:'Aa';}
-    body:not(.nightmode) .toggle:before,body:not(.nightmode) .print{background:black;color:silver}
-    body:not(.nightmode) .print a{color:silver;display:block;width:100%;height:100%}
-    .nightmode .toggle:before{background:silver;color:black;}
-    .nightmode .print{background:silver;color:black;}
-    .nightmode .print a{color:black;}
-    .nightmode .print a:hover{color:cadetblue;}
-    h1,h2,h3,h4,h5,h6{font-family: 'Fira Sans Extra Condensed', sans-serif;font-weight:500;text-align:left;margin: 0 0 .5em;line-height:1.2}
-    h1{font-weight:700;text-align: center;margin:1rem 0 0}
-		h1+h2{text-align: center;font-size: 1rem}
-    h3>span{font-size:.6em;vertical-align: middle}
-    main a {color:cadetblue;text-decoration:none;border-bottom:1px dashed}
-    header ul{display: flex;flex-dire: row;flex-wrap: wrap;justify-content: center;}
-    header ul li{list-style: none;margin:0 1em 0 0;}
-    header ul li a{color:cadetblue;}
-    section{margin:2rem auto;max-width:35rem;}
-    section:first-of-type h2{text-align:center;margin:3rem 0 1rem}
-    section:first-of-type ul{display:flex;flex-direction:row;flex-wrap:wrap;justify-content: center;margin:0 0 1rem;padding:0;}
-    section:first-of-type li{list-style:none;margin:0 1em .5rem 0;text-align:center;}
-    section:first-of-type span{display:block;text-align:center;width:3em;height:3em;line-height:2.5em;margin:0 auto;border:.3em solid;border-radius:3em;font-weight:700;font-family:'Fira Sans Extra Condensed', sans-serif;font-size:1.2em;}
-    section article{margin:1rem 0 2rem;}
-	  img{display: block;margin: 0 auto;border-radius: 500px;width: 270px;}
-    .strong{font-weight:bold;}
-    #contact{background:#e0e0e0;color:#000;padding:1rem; line-height: 2.5rem;}
-    body.nightmode #contact{background:#333;color:#fff;}
-    @media print{
-      body.nightmode{color:black;background:transparent;}
-      .toggle,.print{visibility:hidden;}
+    * {
+      box-sizing: border-box;
     }
-	</style>
+
+    html {
+      font-family: 'PT Serif', serif;
+      font-size: 1.3rem;
+      color: black
+    }
+
+    body.nightmode {
+      color: silver;
+      background: black;
+    }
+
+    .toggle,
+    .print {
+      display: block;
+      cursor: pointer;
+      position: fixed;
+      right: 0;
+      top: 5rem;
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+    }
+
+    .print {
+      top: 10rem;
+      text-align: center;
+    }
+
+    .toggle:before {
+      display: block;
+      text-align: center;
+      content: 'Aa';
+    }
+
+    body:not(.nightmode) .toggle:before,
+    body:not(.nightmode) .print {
+      background: black;
+      color: silver
+    }
+
+    body:not(.nightmode) .print a {
+      color: silver;
+      display: block;
+      width: 100%;
+      height: 100%
+    }
+
+    .nightmode .toggle:before {
+      background: silver;
+      color: black;
+    }
+
+    .nightmode .print {
+      background: silver;
+      color: black;
+    }
+
+    .nightmode .print a {
+      color: black;
+    }
+
+    .nightmode .print a:hover {
+      color: cadetblue;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Fira Sans Extra Condensed', sans-serif;
+      font-weight: 500;
+      text-align: left;
+      margin: 0 0 .5em;
+      line-height: 1.2
+    }
+
+    h1 {
+      font-weight: 700;
+      text-align: center;
+      margin: 1rem 0 0
+    }
+
+    h1+h2 {
+      text-align: center;
+      font-size: 1rem
+    }
+
+    h3>span {
+      font-size: .6em;
+      vertical-align: middle
+    }
+
+    main a {
+      color: cadetblue;
+      text-decoration: none;
+      border-bottom: 1px dashed
+    }
+
+    header ul {
+      display: flex;
+      flex-dire: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    header ul li {
+      list-style: none;
+      margin: 0 1em 0 0;
+    }
+
+    header ul li a {
+      color: cadetblue;
+    }
+
+    section {
+      margin: 2rem auto;
+      max-width: 35rem;
+    }
+
+    section:first-of-type h2 {
+      text-align: center;
+      margin: 3rem 0 1rem
+    }
+
+    section:first-of-type ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 0 1rem;
+      padding: 0;
+    }
+
+    section:first-of-type li {
+      list-style: none;
+      margin: 0 1em .5rem 0;
+      text-align: center;
+    }
+
+    section:first-of-type span {
+      display: block;
+      text-align: center;
+      width: 3em;
+      height: 3em;
+      line-height: 2.5em;
+      margin: 0 auto;
+      border: .3em solid;
+      border-radius: 3em;
+      font-weight: 700;
+      font-family: 'Fira Sans Extra Condensed', sans-serif;
+      font-size: 1.2em;
+    }
+
+    section article {
+      margin: 1rem 0 2rem;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 500px;
+      width: 270px;
+    }
+
+    .strong {
+      font-weight: bold;
+    }
+
+    #contact {
+      background: #e0e0e0;
+      color: #000;
+      padding: 1rem;
+      line-height: 2.5rem;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+
+    body.nightmode #contact {
+      background: #333;
+      color: #fff;
+    }
+
+    @media print {
+      body.nightmode {
+        color: black;
+        background: transparent;
+      }
+
+      .toggle,
+      .print {
+        visibility: hidden;
+      }
+    }
+  </style>
 
   <title>Anahid Aivazian</title>
 </head>
@@ -55,7 +223,7 @@
       <li><a target="_blank" href="https://anaiv.github.io/">Website</a></li>
       <li><a target="_blank" href="https://twitter.com/AnahidAivazian">Twitter</a></li>
       <li><a target="_blank" href="https://www.linkedin.com/in/anahid-a-b1305283/">LinkedIn</a></li>
-	    <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <span class="toggle"></span>
     <span class="print"><a href="javascript:window.print()">Print</a></span>
@@ -63,11 +231,14 @@
 
   <main>
     <section>
-	    <img src="https://anaiv.github.io/assets/img/anahid-cropped.jpg" alt="profile picture">
+      <img src="https://anaiv.github.io/assets/img/anahid-cropped.jpg" alt="profile picture">
       <h2></h2>
       <ul>
         <li><span>3+</span> years as a Graphic Designer</li>
       </ul>
+
+      <code id="contact">email: anahid [dot] aivazian [at] gmail [dot] com</code>
+
     </section>
 
     <section class="m_t_2rem">
@@ -75,7 +246,7 @@
       <article>
         <h3>Violet Creative</h3>
         <h4>Graphic Designer | jan 2018 - PRESENT</h4>
-        <h4>Adobe Creative Suite - Photoshop, Illustrator, InDesign</h4>
+        <h4>Adobe Creative Suite - Photoshop, Illustrator, InDesign, After Effects, Premiere Pro</h4>
         <p>Print Banners, Broshures, Flyers</p>
         <ul>
           <li>Vinarte</li>
@@ -87,7 +258,8 @@
       </article>
 
       <article>
-        <h3>Danco Vision (~2 years) <span><a rel="nofollow" target="_blank" href="http://www.dancovision.ro/">visit company website</a></span></h3>
+        <h3>Danco Vision (~2 years) <span><a rel="nofollow" target="_blank" href="http://www.dancovision.ro/">visit
+              company website</a></span></h3>
         <h4>Graphic designer | mar 2016 - dec 2017</h4>
         <h4>Adobe Creative Suite - Photoshop, Illustrator</h4>
         <p>Branding, social media campain banners &amp; web layouts for in-house clients.</p>
@@ -110,7 +282,9 @@
       <article>
         <h3>Local Police General Directorate (~2 years)</h3>
         <h4>Authorization Service | Feb 2013 - Oct 2014</h4>
-        <p>Ensuring that a commercial company, restaurant or terrace with in sector 3 area , are carrying out their economic activity with a permit or a notice of operation that we provide according to the validity of the documents submitted for it.</p>
+        <p>Ensuring that a commercial company, restaurant or terrace with in sector 3 area , are carrying out their
+          economic activity with a permit or a notice of operation that we provide according to the validity of the
+          documents submitted for it.</p>
       </article>
 
       <article>
@@ -132,18 +306,21 @@
         <p>Advanced English speaking / writing Certification</p>
       </article>
 
-	<code id="contact">email: anahid [dot] aivazian [at] gmail [dot] com</code>
 
     </section>
   </main>
 
   <script>
     var body = document.querySelector('body'),
-        toggle = document.querySelector('.toggle');
+      toggle = document.querySelector('.toggle');
 
-    toggle.onclick = function(){body.classList.toggle('nightmode');}; // this enables your night mode functionality
+    toggle.onclick = function () {
+      body.classList.toggle('nightmode');
+    }; // this enables your night mode functionality
     // toggle.click(); // comment this out if you don't want the night mode theme enabled by default
   </script>
 
 
-</body></html>
+</body>
+
+</html>
