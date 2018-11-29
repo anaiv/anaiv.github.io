@@ -1,0 +1,18 @@
+---
+title: Sparkware
+date: 2018-02-02
+img: "/assets/projects/webdesign/sparkware/00.jpg"
+---
+
+
+<div class="row">
+    {% for image in site.static_files %}
+    {% if image.path contains 'projects/webdesign/sparkware' %}
+        <div class="col-lg-12 offset-lg-1 mb-3-rem nk-image-box-1">
+            <div class="nk-image-box-4">
+                <img src="{{ image.path | prepend: site.url }}" alt="image" />
+            </div>
+        </div>
+    {% endif %}
+    {% endfor %}
+</div>
